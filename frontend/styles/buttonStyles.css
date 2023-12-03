@@ -1,0 +1,40 @@
+.button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Example height, adjust as needed */
+    padding: 0 1rem; /* Left and right padding */
+    margin: 0.5rem;
+    background-color: #D1FAE5; /* Use your brand color here */
+    color: #059669; /* Use your brand color here */
+    font-weight: bold;
+    border: 2px solid #34D399; /* Use your brand color here */
+    border-radius: 0.375rem; /* 6px */
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button-base::after {
+    content: '';
+    position: absolute;
+    right: -26px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 35px; /* Adjust width of the tail */
+    height: 35px; /* Adjust height of the tail */
+    background-color: #D1FAE5; /* Use your brand color here */
+    border-top: 2px solid #34D399; /* Use your brand color here */
+    border-right: 2px solid #34D399; /* Use your brand color here */
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button-base:hover {
+    background-color: #a2d9c7; /* Lighter shade for hover, adjust as needed */
+  }
+  
+  .button-base:hover::after {
+    background-color: #a2d9c7; /* Lighter shade for hover, adjust as needed */
+  }
+  

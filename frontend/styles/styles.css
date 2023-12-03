@@ -1,0 +1,48 @@
+/* styles.css */
+.custom-button {
+    /* Common styles for all buttons */
+    display: inline-block;
+    color: #FFFFFF; /* Text color */
+    background-color: #10B981; /* Tailwind 'green-500' as an example */
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700; /* Tailwind 'font-bold' */
+    text-decoration: none;
+    transition: transform 0.2s;
+    /* Add custom padding and margin per button via props */
+  }
+  
+  .custom-button::before,
+  .custom-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .custom-button::before {
+    /* Tail of the button */
+    right: 100%; /* Position it to the left of the button */
+    border-style: solid;
+    border-width: 18px 18px 18px 0; /* Tail size */
+    border-color: transparent #10B981; /* Tailwind 'green-500' as an example */
+    /* Adjust color to match each button's background */
+  }
+  
+  .custom-button::after {
+    /* Right side triangular cut */
+    left: 100%; /* Position it to the right of the button */
+    border-style: solid;
+    border-width: 18px 0 18px 18px;
+    border-color: transparent transparent transparent #FFFFFF;
+    /* Adjust the color to match the button background */
+  }
+  
+  /* Hover effect */
+  .custom-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* You can add more specific styles for each button if needed */
+  
